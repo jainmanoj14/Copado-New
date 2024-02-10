@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Conditionally render element in LWc" icon-name="utility:user">
+        <div>
+            Hello, {myValue}!
+        </div>
+    <div style="padding=10px">
+    <lightning-input label="Click Me" type= "checkbox" onchange={handleChange}>
+        </lightning-input>
+
+        <template if:true={showMe}>
+            I am visible.
+        </template>
+        <template if:false={showMe}>
+            I am not visible.
+        </template>
+    </div>
+    </lightning-card>
+</template>

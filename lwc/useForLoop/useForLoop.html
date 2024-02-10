@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="How to use For Loop in LWC" icon-name="utility:user">
+        <div style="padding:10px">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                <tr class="slds-line-height_reset">
+                    <th>Student Name</th>
+                    <th>Class</th>
+                    <th>Fees</th>
+                </tr>
+                <template for:each={students} for:item="stu">
+                    <tr key={stu.id}>
+                        <td>{stu.Name}</td>
+                        <td>{stu.Class}</td>
+                        <td>{stu.Fees}</td>
+                    </tr>
+                </template>
+            </table>            
+        </div>
+    </lightning-card>    
+</template>
